@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Catalogue</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <div id="catalogue-root">
+    <main class="stage">
+      <div id="loading">Loading catalogue…</div>
+      <div id="zoom-wrap">
+        <div id="flipbook" class="flipbook"></div>
+      </div>
+
+      <div class="controls-tr floating floating-tr">
+        <button class="btn btn-fullscreen" aria-label="Toggle fullscreen">⛶</button>
+      </div>
+
+      <div class="jump floating floating-br">
+        <label for="page-input">Go to</label>
+        <input id="page-input" type="number" min="1" value="1" />
+        <span id="page-total" class="page-total">/ —</span>
+      </div>
+
+      <button id="rail-handle" class="rail-handle closed" aria-label="Toggle page thumbnails">‹</button>
+
+      <aside id="thumb-rail" class="thumb-rail closed">
+        <div class="thumb-list"></div>
+      </aside>
+    </main>
+  </div>
+
+  <script src="js/jquery.js"></script>
+  <script src="js/turn.js"></script>
+  <script src="js/catalogue.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Products | LEDONIX Architectural &amp; Commercial LED Lighting</title>
+<meta content="Explore the full LEDONIX lighting fixture lineup: Architectural & Commercial (Allora, Meraki), Outdoor & Landscape (Storm, Wall Washers), Industrial & Functional (Magnum Linear), and Decorative & Custom." name="description"/>
+<meta content="#101916" name="theme-color"/>
+<link rel="icon" type="image/x-icon" href="favicon.ico"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+:root{--ink:#111111;--forest:#b5121b;--forest2:#e5232e;--lime:#ed2939;--paper:#f7f7f7;--white:#fff;--muted:#686868;--line:#e3e3e3;--dark:#090909;--max:1240px;--radius:22px;--shadow:0 24px 70px rgba(16,25,22,.12)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--paper);color:var(--ink);font-family:'DM Sans',sans-serif;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}img{max-width:100%;display:block}button,input,select,textarea{font:inherit}.wrap{width:min(var(--max),calc(100% - 48px));margin-inline:auto}.announcement{background:var(--dark);color:#d8d8d8;font-size:12px;letter-spacing:.04em}.announcement .wrap{min-height:36px;display:flex;justify-content:space-between;align-items:center;gap:16px}.announcement strong{color:var(--lime);font-weight:600}.nav-shell{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(18px);border-bottom:1px solid rgba(23,33,29,.08);box-shadow:0 4px 20px rgba(0,0,0,0.03)}nav{height:84px;display:flex;align-items:center;justify-content:space-between;gap:28px}.brand{display:flex;align-items:center;gap:11px}.brand-official-logo{width:150px;max-height:50px;object-fit:contain}.nav-links{display:flex;align-items:center;gap:4px;border:1px solid #ececec;border-radius:999px;background:#f8f8f8;padding:6px}.nav-links a{padding:9px 15px;border-radius:999px;font-size:12.5px;font-weight:700;color:#414141;transition:.2s ease}.nav-links a:hover,.nav-links a.active{color:var(--forest);background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.045)}.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:12px 22px;border-radius:999px;background:var(--forest);color:white;font-size:13px;font-weight:700;border:1px solid var(--forest);transition:.2s ease;cursor:pointer}.nav-cta:hover,.btn:hover{background:var(--dark);border-color:var(--dark);transform:translateY(-2px)}.btn-outline{background:transparent;color:var(--ink);border-color:#cbd3ca}.btn-outline:hover{background:white;border-color:white}.menu-toggle{display:none;border:0;background:transparent;font-size:26px;padding:8px}.section{padding:60px 0}.section-white{background:#fff}.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:32px}.section-kicker{font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:800;color:#e5232e;display:block;margin-bottom:6px}.section h2{font:700 clamp(32px,3.8vw,46px)/1.12 Manrope,sans-serif;letter-spacing:-.05em;margin:8px 0 0;max-width:700px}.section-intro{max-width:440px;color:var(--muted);font-size:14px;line-height:1.75;margin:0}
+.product-grid{display:grid;grid-template-columns:repeat(auto-fill, minmax(280px, 1fr));gap:20px}
+.product-card{background:#fff;border:1px solid #e9ebe4;border-radius:18px;overflow:hidden;transition:all .25s ease;display:flex;flex-direction:column;min-width:0}
+.product-card:hover{transform:translateY(-5px);box-shadow:0 18px 42px rgba(16,25,22,.09)}
+.product-img{height:210px;position:relative;overflow:hidden;background:radial-gradient(circle at center, #ffffff, #edf0eb);display:flex;align-items:center;justify-content:center;padding:16px}
+.product-img img{max-height:100%;max-width:100%;width:auto;height:auto;object-fit:contain;transition:transform .45s ease}
+.product-card:hover .product-img img{transform:scale(1.06)}
+.product-num{position:absolute;top:13px;left:13px;background:rgba(255,255,255,.92);border-radius:999px;padding:5px 10px;font-size:9.5px;font-weight:800;letter-spacing:.06em;border-left:3px solid var(--lime);color:#111}
+.product-power-tag{position:absolute;top:13px;right:13px;background:var(--lime);color:#fff;border-radius:999px;padding:4px 10px;font-size:9.5px;font-weight:800;letter-spacing:.03em}
+.product-info{padding:20px;display:flex;flex-direction:column;flex:1}
+.product-series{font-size:9.5px;text-transform:uppercase;letter-spacing:.14em;color:var(--forest);font-weight:800;margin-bottom:6px}
+.product-info h3{font:700 17px Manrope,sans-serif;margin:0 0 8px;letter-spacing:-.03em;color:#111}
+.product-info p{font-size:12px;color:var(--muted);line-height:1.65;margin:0 0 14px;flex:1}
+.spec-chip-box{display:grid;grid-template-columns:1fr 1fr;gap:6px;background:#f9faf9;border:1px solid #edf0ec;border-radius:10px;padding:8px 10px;margin-bottom:14px;font-size:11px}
+.spec-chip-box small{display:block;font-size:9px;color:#888;text-transform:uppercase;letter-spacing:.04em}
+.spec-chip-box strong{color:#111;font-weight:700}
+.product-actions{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:auto;padding-top:10px;border-top:1px solid #f0f2ef}
+.btn-specs{background:transparent;border:1px solid #ccd0ca;border-radius:8px;padding:7px 12px;font-size:11.5px;font-weight:700;color:#222;cursor:pointer;transition:.2s}
+.btn-specs:hover{background:#f2f4f2;border-color:#111}
+.btn-wa{background:#25d366;color:#fff;border-radius:8px;padding:7px 13px;font-size:11.5px;font-weight:700;display:inline-flex;align-items:center;gap:5px;text-decoration:none;transition:.2s}
+.btn-wa:hover{background:#1da851}
+.footer{background:#0b120f;color:#aab5ad;padding:52px 0 22px}.footer-grid{display:grid;grid-template-columns:1.4fr .7fr .7fr 1fr;gap:38px;padding-bottom:40px}.footer .brand-official-logo{background:#fff;border-radius:5px;padding:5px;width:150px}.footer-about p{font-size:12px;line-height:1.8;max-width:300px;color:#8f9c93}.footer h4{font:700 12px Manrope,sans-serif;color:#fff;margin:4px 0 18px}.footer-links{display:grid;gap:12px}.footer-links a{font-size:12px;color:#aab5ad}.footer-links a:hover{color:var(--lime)}.footer-bottom{border-top:1px solid #27312b;padding-top:20px;display:flex;justify-content:space-between;gap:20px;font-size:10px;color:#7d8981}
+@media(max-width:900px){.footer-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:760px){.menu-toggle{display:block}.nav-cta{display:none}.nav-links{display:none;position:absolute;top:84px;left:16px;right:16px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px;flex-direction:column;box-shadow:0 20px 50px rgba(0,0,0,0.1)}.nav-links.open{display:flex}.nav-links a{width:100%;text-align:left;padding:12px 14px}.section-head{display:block}.section-intro{margin-top:12px}}
+</style>
+</head>
+<body>
+<div class="announcement"><div class="wrap"><span><strong>LEDONIX</strong> &nbsp; Architectural lighting, built with purpose</span><span>Manufacturing in Bengaluru · Since 2009 &nbsp; / &nbsp; <a href="tel:+919686331758">+91 96863 31758</a></span></div></div>
+<div class="nav-shell"><div class="wrap"><nav aria-label="Main navigation">
+<a aria-label="LEDONIX home" class="brand" href="index.html#home"><img alt="LEDONIX logo" class="brand-official-logo" src="images/ledonix-logo.png"/></a>
+<button aria-expanded="false" aria-label="Toggle navigation" class="menu-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+<div class="nav-links" id="navLinks">
+<a class="active" href="products.html">Products</a>
+<a href="index.html#capabilities">Capabilities</a>
+<a href="index.html#applications">Applications</a>
+<a href="index.html#executed-installations">Projects</a>
+<a href="catalogue/lnx_catalogue.html" target="_blank">Catalogue</a>
+<a href="index.html#contact">About &amp; Contact</a>
+</div>
+<a class="nav-cta" href="index.html#contact">Discuss a project <span>↗</span></a>
+</nav></div></div>
+
+<main>
+<section class="section section-white" style="padding-top:40px; padding-bottom:80px;">
+<div class="wrap">
+  <div class="section-head">
+    <div>
+      <div class="section-kicker">LEDONIX Product Portfolio</div>
+      <h2>Explore our product range.</h2>
+    </div>
+    <p class="section-intro">Explore our luminaires categorized under the 4 core lighting collections as represented on our website: Architectural &amp; Commercial, Outdoor &amp; Landscape, Industrial &amp; Functional, and Decorative &amp; Custom.</p>
+  </div>
+
+  <!-- Interactive Controls adopting the 4 website categories -->
+  <div style="background:#fff; border:1px solid #e7ebe6; border-radius:18px; padding:22px; margin-bottom:28px; box-shadow:0 12px 36px rgba(0,0,0,0.04);">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; margin-bottom:18px;">
+      <div style="position:relative; flex:1; min-width:280px; max-width:440px;">
+        <svg style="position:absolute; left:14px; top:50%; transform:translateY(-50%); width:16px; height:16px; fill:none; stroke:#666; stroke-width:2;" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input id="prodSearch" style="width:100%; border:1px solid #d8ddd7; border-radius:999px; padding:10px 18px 10px 38px; font-size:12.5px; outline:none; background:#fafbfa; font-family:inherit;" placeholder="Search by model, series, wattage (e.g. Allora, Meraki, Storm, 9W)..." type="text"/>
+      </div>
+      <div id="prodCount" style="font-size:13px; font-weight:700; color:#555;">Showing 22 of 22 products</div>
+    </div>
+
+    <!-- The 4 Core Website Collections Tabs -->
+    <div style="display:flex; flex-wrap:wrap; gap:8px; padding-top:14px; border-top:1px solid #edf0ec;" id="collectionTabs">
+      <button class="coll-btn active" data-col="all" style="border:1px solid #111; background:#111; color:#fff; padding:8px 16px; border-radius:999px; font-size:12px; font-weight:700; cursor:pointer; display:inline-flex; align-items:center; gap:6px;">All Luminaires <span style="background:rgba(255,255,255,0.25); font-size:10px; padding:2px 7px; border-radius:999px;">22</span></button>
+      <button class="coll-btn" data-col="architectural" style="border:1px solid #e0e4df; background:#fafbfa; color:#444; padding:8px 16px; border-radius:999px; font-size:12px; font-weight:700; cursor:pointer; display:inline-flex; align-items:center; gap:6px;">03 / Architectural &amp; Commercial <span style="background:#e8ebe7; color:#555; font-size:10px; padding:2px 7px; border-radius:999px;">11</span></button>
+      <button class="coll-btn" data-col="outdoor" style="border:1px solid #e0e4df; background:#fafbfa; color:#444; padding:8px 16px; border-radius:999px; font-size:12px; font-weight:700; cursor:pointer; display:inline-flex; align-items:center; gap:6px;">02 / Outdoor &amp; Landscape <span style="background:#e8ebe7; color:#555; font-size:10px; padding:2px 7px; border-radius:999px;">4</span></button>
+      <button class="coll-btn" data-col="industrial" style="border:1px solid #e0e4df; background:#fafbfa; color:#444; padding:8px 16px; border-radius:999px; font-size:12px; font-weight:700; cursor:pointer; display:inline-flex; align-items:center; gap:6px;">04 / Industrial &amp; Functional <span style="background:#e8ebe7; color:#555; font-size:10px; padding:2px 7px; border-radius:999px;">5</span></button>
+      <button class="coll-btn" data-col="decorative" style="border:1px solid #e0e4df; background:#fafbfa; color:#444; padding:8px 16px; border-radius:999px; font-size:12px; font-weight:700; cursor:pointer; display:inline-flex; align-items:center; gap:6px;">01 / Decorative &amp; Custom <span style="background:#e8ebe7; color:#555; font-size:10px; padding:2px 7px; border-radius:999px;">2</span></button>
+    </div>
+
+    <!-- Wattage Quick Filter -->
+    <div style="display:flex; align-items:center; gap:8px; margin-top:14px; padding-top:12px; border-top:1px dashed #e7ebe6; font-size:12px; color:#666; flex-wrap:wrap;" id="powerFilters">
+      <span style="font-weight:700; color:#111;">Wattage:</span>
+      <button class="pwr-btn active" data-pwr="all" style="background:#fce8e9; border:1px solid #ed2939; color:#b5121b; border-radius:6px; padding:3px 10px; font-size:11px; font-weight:700; cursor:pointer;">All</button>
+      <button class="pwr-btn" data-pwr="under15" style="background:transparent; border:1px solid #d4dad2; color:#555; border-radius:6px; padding:3px 10px; font-size:11px; font-weight:700; cursor:pointer;">≤ 9W</button>
+      <button class="pwr-btn" data-pwr="12to25" style="background:transparent; border:1px solid #d4dad2; color:#555; border-radius:6px; padding:3px 10px; font-size:11px; font-weight:700; cursor:pointer;">12W – 25W</button>
+      <button class="pwr-btn" data-pwr="30to50" style="background:transparent; border:1px solid #d4dad2; color:#555; border-radius:6px; padding:3px 10px; font-size:11px; font-weight:700; cursor:pointer;">30W – 50W</button>
+      <button class="pwr-btn" data-pwr="60plus" style="background:transparent; border:1px solid #d4dad2; color:#555; border-radius:6px; padding:3px 10px; font-size:11px; font-weight:700; cursor:pointer;">60W+</button>
+    </div>
+  </div>
+
+  <!-- Products Grid -->
+  <div class="product-grid" id="mainGrid">
+    <!-- Populated dynamically via JS -->
+  </div>
+
+  <!-- Empty Search -->
+  <div id="noResultsMsg" style="display:none; text-align:center; padding:50px 20px; background:#fff; border-radius:18px; border:1px dashed #d5dbd4; margin-top:20px;">
+    <h3 style="font:700 20px Manrope,sans-serif; margin:0 0 8px;">No matching fixtures found</h3>
+    <p style="font-size:13px; color:#666; margin:0 0 16px;">Try adjusting your keywords or clearing the wattage filter.</p>
+    <button class="btn" style="padding:8px 18px; font-size:12px;" onclick="resetAllFilters()">Reset Filters</button>
+  </div>
+</div>
+</section>
+</main>
+
+<!-- Detailed Specification Modal -->
+<div id="prodModalBackdrop" style="position:fixed; inset:0; z-index:9999; background:rgba(0,0,0,0.75); backdrop-filter:blur(6px); display:none; align-items:center; justify-content:center; padding:20px;" onclick="if(event.target===this)closeProdModal()">
+  <div style="background:#fff; border-radius:22px; width:min(860px, 100%); max-height:90vh; overflow-y:auto; padding:32px; position:relative; box-shadow:0 30px 80px rgba(0,0,0,0.35);">
+    <button onclick="closeProdModal()" style="position:absolute; top:18px; right:18px; width:36px; height:36px; border-radius:50%; border:1px solid #ddd; background:#f5f5f5; font-size:20px; cursor:pointer; display:grid; place-items:center;">×</button>
+    <div style="display:grid; grid-template-columns:1fr 1.2fr; gap:28px; align-items:start;">
+      <div style="background:#f4f6f4; border-radius:16px; padding:20px; display:flex; align-items:center; justify-content:center; min-height:300px;">
+        <img id="modalProductImg" src="" alt="" style="max-height:260px; max-width:100%; object-fit:contain;"/>
+      </div>
+      <div>
+        <span id="modalProductSeries" style="font-size:10px; letter-spacing:.16em; text-transform:uppercase; font-weight:800; color:#b5121b; display:block; margin-bottom:4px;">SERIES</span>
+        <h2 id="modalProductTitle" style="font:700 24px/1.2 Manrope,sans-serif; margin:0 0 10px; color:#111;">Product Title</h2>
+        <p id="modalProductDesc" style="font-size:13px; color:#666; line-height:1.6; margin:0 0 16px;">Description</p>
+
+        <table style="width:100%; border-collapse:collapse; font-size:12px; margin-bottom:20px;">
+          <tr style="border-bottom:1px solid #edf0ec;"><td style="padding:7px 0; color:#777; width:42%;">Rated Power</td><td id="modalProductPower" style="font-weight:700; color:#111;">--</td></tr>
+          <tr style="border-bottom:1px solid #edf0ec;"><td style="padding:7px 0; color:#777;">Luminous Output</td><td id="modalProductLumens" style="font-weight:700; color:#111;">--</td></tr>
+          <tr style="border-bottom:1px solid #edf0ec;"><td style="padding:7px 0; color:#777;">Color Temperature</td><td id="modalProductCct" style="font-weight:700; color:#111;">--</td></tr>
+          <tr style="border-bottom:1px solid #edf0ec;"><td style="padding:7px 0; color:#777;">Color Rendering</td><td id="modalProductCri" style="font-weight:700; color:#111;">--</td></tr>
+          <tr style="border-bottom:1px solid #edf0ec;"><td style="padding:7px 0; color:#777;">Beam Angle</td><td id="modalProductBeam" style="font-weight:700; color:#111;">--</td></tr>
+          <tr style="border-bottom:1px solid #edf0ec;"><td style="padding:7px 0; color:#777;">IP Protection</td><td id="modalProductIp" style="font-weight:700; color:#111;">--</td></tr>
+          <tr style="border-bottom:1px solid #edf0ec;"><td style="padding:7px 0; color:#777;">Dimensions / Cutout</td><td id="modalProductCutout" style="font-weight:700; color:#111;">--</td></tr>
+          <tr style="border-bottom:1px solid #edf0ec;"><td style="padding:7px 0; color:#777;">Available Finishes</td><td id="modalProductFinishes" style="font-weight:700; color:#111;">--</td></tr>
+          <tr><td style="padding:7px 0; color:#777;">Mounting System</td><td id="modalProductMounting" style="font-weight:700; color:#111;">--</td></tr>
+        </table>
+
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <a id="modalProductWaLink" href="#" target="_blank" style="background:#25d366; color:#fff; padding:10px 18px; border-radius:999px; font-size:12px; font-weight:700; display:inline-flex; align-items:center; gap:6px; text-decoration:none;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.698.077-2.222-.56-1.579-.661-2.617-2.261-2.701-2.373-.083-.112-.663-.883-.663-1.684 0-.801.42-1.196.571-1.36.151-.164.331-.205.441-.205.11 0 .221.002.317.006.102.005.239-.039.373.286.138.334.471 1.15.513 1.234.041.085.069.183.014.293-.055.11-.083.178-.166.273-.082.096-.174.215-.248.288-.083.082-.17.171-.073.337.097.165.433.714.929 1.156.638.568 1.175.744 1.341.826.166.083.262.069.36-.041.096-.111.413-.482.523-.647.11-.166.221-.138.373-.083.151.055.965.455 1.131.537.166.083.276.124.317.193.042.069.042.405-.102.81z"/></svg>
+            Inquire on WhatsApp ↗
+          </a>
+          <a href="index.html#contact" style="background:#fff; border:1px solid #ccd0cb; color:#111; padding:10px 18px; border-radius:999px; font-size:12px; font-weight:700; text-decoration:none;">Project Enquiry</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer"><div class="wrap"><div class="footer-grid"><div class="footer-about"><a class="brand" href="index.html#home"><img alt="LEDONIX logo" class="brand-official-logo" src="images/ledonix-logo.png"/></a><p>LEDONIX Technologies Private Limited designs, manufactures and customizes LED lighting fixtures for residential, commercial and industrial applications — engineered in Bengaluru, delivered worldwide.</p></div><div><h4>Product range</h4><div class="footer-links"><a href="products.html#architectural">Architectural &amp; Commercial</a><a href="products.html#outdoor">Outdoor &amp; Landscape</a><a href="products.html#industrial">Industrial &amp; Functional</a><a href="products.html#decorative">Decorative &amp; Custom</a></div></div><div><h4>LEDONIX</h4><div class="footer-links"><a href="index.html#capabilities">Capabilities</a><a href="index.html#applications">Applications</a><a href="index.html#executed-installations">Projects</a><a href="catalogue/lnx_catalogue.html" target="_blank">Catalogue</a><a href="index.html#contact">Contact</a></div></div><div><h4>Get in touch</h4><div class="footer-links"><a href="tel:+919686331758">+91 96863 31758</a><a href="index.html#contact">Bengaluru, Karnataka, India</a><a href="index.html#contact">Project &amp; OEM enquiries ↗</a></div></div></div><div class="footer-bottom"><span>© <span id="year">2026</span> LEDONIX Technologies Private Limited. All rights reserved.</span><span>Designed for better light and better spaces.</span></div></div></footer>
+
+<script>
+(function(){
+  const DATA = [{"id": "allora-1", "collection": "architectural", "subcat": "downlights", "num": "01 / ARCHITECTURAL", "series": "ALLORA SERIES", "name": "Allora I \u2014 9W Downlight", "power": "9W COB", "power_num": 9, "img": "images/products/1_ALLORA_I_9W_Card_UltraHD.png", "desc": "Deep recessed architectural COB downlight with precision optical reflector for ultra-low glare (UGR<19) in residences, corporate offices, and hospitality.", "lumens": "900 lm (100 lm/W)", "cct": "3000K \u00b7 4000K \u00b7 6000K", "cri": "CRI >90", "beam": "15\u00b0 / 24\u00b0 / 36\u00b0", "ip": "IP20 / IP44", "cutout": "\u00d885 \u00d7 92 mm (Cutout \u00d875 mm)", "finishes": "Matte Black, Architectural White", "mounting": "Recessed Spring Clip"}, {"id": "allora-2", "collection": "architectural", "subcat": "downlights", "num": "02 / ARCHITECTURAL", "series": "ALLORA SERIES", "name": "Allora II \u2014 9W Pinhole Anti-Glare", "power": "9W PINHOLE", "power_num": 9, "img": "images/products/2_ALLORA_II_9W_Card_UltraHD.png", "desc": "Micro-aperture pinhole recessed luminaire delivering quiet visual ceiling lines and focused high-contrast light for art galleries and executive spaces.", "lumens": "780 lm", "cct": "2700K \u00b7 3000K \u00b7 4000K", "cri": "CRI >92", "beam": "12\u00b0 / 24\u00b0 Narrow Spot", "ip": "IP20", "cutout": "\u00d880 \u00d7 95 mm (Cutout \u00d870 mm)", "finishes": "Matte Black, Architectural White", "mounting": "Recessed Ceiling"}, {"id": "allora-3", "collection": "architectural", "subcat": "downlights", "num": "03 / ARCHITECTURAL", "series": "ALLORA SERIES", "name": "Allora III \u2014 9W Downlight", "power": "9W COB", "power_num": 9, "img": "images/products/3_ALLORA_III_9W_Card_UltraHD.png", "desc": "Slim-trim architectural recessed downlight with precision reflector optics and die-cast aluminum heat sink for continuous commercial operation.", "lumens": "850 lm", "cct": "3000K \u00b7 4000K \u00b7 6000K", "cri": "CRI >90", "beam": "24\u00b0 / 36\u00b0 / 60\u00b0", "ip": "IP20", "cutout": "\u00d890 \u00d7 88 mm (Cutout \u00d880 mm)", "finishes": "Matte Black, Architectural White", "mounting": "Recessed Ceiling"}, {"id": "allora-square", "collection": "architectural", "subcat": "downlights", "num": "04 / ARCHITECTURAL", "series": "ALLORA SERIES", "name": "Allora Square \u2014 9W Recessed", "power": "9W SQUARE", "power_num": 9, "img": "images/products/4_ALLORA_9W_Square_Card_UltraHD.png", "desc": "Geometric square bezel downlight for contemporary ceiling grids, combining deep recessed comfort with crisp modern architectural aesthetics.", "lumens": "820 lm", "cct": "3000K \u00b7 4000K", "cri": "CRI >90", "beam": "24\u00b0 / 36\u00b0", "ip": "IP20", "cutout": "85 \u00d7 85 \u00d7 90 mm (Cutout 75\u00d775 mm)", "finishes": "Matte Black, Architectural White", "mounting": "Recessed Ceiling"}, {"id": "allora-double", "collection": "architectural", "subcat": "downlights", "num": "05 / ARCHITECTURAL", "series": "ALLORA SERIES", "name": "Allora Double \u2014 18W (2\u00d79W) Gimbal", "power": "18W (2\u00d79W)", "power_num": 18, "img": "images/products/5_ALLORA_9W_X_2_Card_UltraHD.png", "desc": "Twin independent multi-directional gimbal heads for retail, gallery, and corridor directional accent illumination from a single cutout.", "lumens": "1,650 lm", "cct": "3000K \u00b7 4000K", "cri": "CRI >90", "beam": "15\u00b0 / 24\u00b0 / 36\u00b0", "ip": "IP20", "cutout": "160 \u00d7 88 \u00d7 95 mm (Cutout 145\u00d775 mm)", "finishes": "Matte Black, Architectural White", "mounting": "Recessed Ceiling"}, {"id": "meraki-15", "collection": "architectural", "subcat": "track", "num": "06 / ARCHITECTURAL", "series": "MERAKI SERIES", "name": "Meraki 15W Track Spotlight", "power": "15W COB", "power_num": 15, "img": "images/products/1_MERAKI_15W_DualFinish_Showcase_1350px.png", "desc": "Compact architectural track spotlight with 350\u00b0 horizontal rotation and 90\u00b0 vertical tilt. Features high-purity optical lens and passive heat sink.", "lumens": "1,350 lm", "cct": "3000K \u00b7 4000K \u00b7 6000K", "cri": "CRI >90", "beam": "15\u00b0 / 24\u00b0 / 38\u00b0", "ip": "IP20", "cutout": "\u00d860 \u00d7 140 mm", "finishes": "Matte Black, Architectural White", "mounting": "3-Circuit / 1-Circuit Track"}, {"id": "meraki-20", "collection": "architectural", "subcat": "track", "num": "07 / ARCHITECTURAL", "series": "MERAKI SERIES", "name": "Meraki 20W Track Spotlight", "power": "20W COB", "power_num": 20, "img": "images/products/2_MERAKI_20W_DualFinish_Showcase_1350px.png", "desc": "High-performance commercial accent spotlight providing crisp beam delineation and rich color saturation for fashion apparel and retail boutiques.", "lumens": "1,850 lm", "cct": "3000K \u00b7 4000K \u00b7 6000K", "cri": "CRI >90", "beam": "15\u00b0 / 24\u00b0 / 38\u00b0", "ip": "IP20", "cutout": "\u00d865 \u00d7 155 mm", "finishes": "Matte Black, Architectural White", "mounting": "Track Mounted"}, {"id": "meraki-25", "collection": "architectural", "subcat": "track", "num": "08 / ARCHITECTURAL", "series": "MERAKI SERIES", "name": "Meraki 25W Gallery Spotlight", "power": "25W COB", "power_num": 25, "img": "images/products/3_MERAKI_25W_DualFinish_Showcase_1350px.png", "desc": "Museum and gallery grade luminaire with ultra-high color rendering (CRI >92) and flicker-free dimming driver options (DALI / 0-10V).", "lumens": "2,300 lm", "cct": "3000K \u00b7 4000K", "cri": "CRI >92", "beam": "24\u00b0 / 38\u00b0 / 60\u00b0", "ip": "IP20", "cutout": "\u00d875 \u00d7 165 mm", "finishes": "Matte Black, Architectural White", "mounting": "Track Mounted"}, {"id": "meraki-30", "collection": "architectural", "subcat": "track", "num": "09 / ARCHITECTURAL", "series": "MERAKI SERIES", "name": "Meraki 30W Commercial Spotlight", "power": "30W COB", "power_num": 30, "img": "images/products/4_MERAKI_30W_DualFinish_Showcase_1350px.png", "desc": "Heavy-duty commercial track luminaire designed for high-ceiling retail stores, automobile showrooms, and department centers.", "lumens": "2,800 lm", "cct": "3000K \u00b7 4000K \u00b7 6000K", "cri": "CRI >90", "beam": "24\u00b0 / 38\u00b0 / 60\u00b0", "ip": "IP20", "cutout": "\u00d885 \u00d7 180 mm", "finishes": "Matte Black, Architectural White", "mounting": "Track Mounted"}, {"id": "meraki-50", "collection": "architectural", "subcat": "track", "num": "10 / ARCHITECTURAL", "series": "MERAKI SERIES", "name": "Meraki 50W High-Bay Spotlight", "power": "50W COB", "power_num": 50, "img": "images/products/5_MERAKI_50W_DualFinish_Showcase_1350px.png", "desc": "High-lumen track fixture delivering 4,600 lumens for double-height showrooms, car dealerships, and architectural exhibition spaces.", "lumens": "4,600 lm", "cct": "3000K \u00b7 4000K", "cri": "CRI >90", "beam": "24\u00b0 / 38\u00b0", "ip": "IP20", "cutout": "\u00d8100 \u00d7 205 mm", "finishes": "Matte Black, Architectural White", "mounting": "Track Mounted"}, {"id": "track-9x1w", "collection": "architectural", "subcat": "track", "num": "11 / ARCHITECTURAL", "series": "TRACK SPOTLIGHTS", "name": "Cluster Track Spotlight 9\u00d71W", "power": "9\u00d71W (9W)", "power_num": 9, "img": "images/products/Black 9\u00d71W LED Track Spotlight.png", "desc": "Multi-lens 9-LED directional cluster spotlight offering sharp contrast, zero optical spill, and distinct visual presence for retail showcases.", "lumens": "950 lm", "cct": "3000K \u00b7 4000K", "cri": "CRI >85", "beam": "25\u00b0 Optical Lenses", "ip": "IP20", "cutout": "\u00d870 \u00d7 150 mm", "finishes": "Anodized Black", "mounting": "Track Mounted"}, {"id": "magnum-36", "collection": "industrial", "subcat": "linear", "num": "12 / INDUSTRIAL", "series": "MAGNUM SERIES", "name": "Magnum Linear Profile 36W", "power": "36W LINEAR", "power_num": 36, "img": "images/products/1_MAGNUM_LINEAR_36W_Card_HD.png", "desc": "Continuous extruded aluminum architectural linear profile with opal polycarbonate diffuser. Ideal for corporate offices, reception desks, and educational hubs.", "lumens": "3,600 lm (100 lm/W)", "cct": "3000K \u00b7 4000K \u00b7 6000K", "cri": "CRI >85", "beam": "110\u00b0 Diffuse Uniform", "ip": "IP20", "cutout": "1200 \u00d7 50 \u00d7 75 mm", "finishes": "Matte Black, Architectural White, Anodized Silver", "mounting": "Suspended Pendant / Surface / Recessed"}, {"id": "magnum-cob-6", "collection": "industrial", "subcat": "linear", "num": "13 / INDUSTRIAL", "series": "MAGNUM SERIES", "name": "Magnum Modular Linear COB 6W", "power": "6W COB", "power_num": 6, "img": "images/products/2_MAGNUM_LINEAR_COB_6W_Card_HD.png", "desc": "Compact modular linear COB accent insert for magnetic and architectural profile channels. Provides focused task illumination with clean snap-in installation.", "lumens": "540 lm", "cct": "3000K \u00b7 4000K", "cri": "CRI >90", "beam": "30\u00b0 / 45\u00b0", "ip": "IP20", "cutout": "110 \u00d7 22 \u00d7 45 mm", "finishes": "Matte Black, Architectural White", "mounting": "Magnetic / Profile Insert"}, {"id": "magnum-cob-12", "collection": "industrial", "subcat": "linear", "num": "14 / INDUSTRIAL", "series": "MAGNUM SERIES", "name": "Magnum Modular Linear COB 12W", "power": "12W COB", "power_num": 12, "img": "images/products/3_MAGNUM_LINEAR_COB_12W_Card_HD.png", "desc": "Precision multi-optic modular linear downlight insert for profile systems, delivering ultra-low glare in executive boardrooms and modern reception spaces.", "lumens": "1,100 lm", "cct": "3000K \u00b7 4000K", "cri": "CRI >90", "beam": "24\u00b0 / 36\u00b0", "ip": "IP20", "cutout": "220 \u00d7 22 \u00d7 45 mm", "finishes": "Matte Black, Architectural White", "mounting": "Magnetic / Profile Insert"}, {"id": "magnum-cob-18", "collection": "industrial", "subcat": "linear", "num": "15 / INDUSTRIAL", "series": "MAGNUM SERIES", "name": "Magnum Modular Linear COB 18W", "power": "18W COB", "power_num": 18, "img": "images/products/4_MAGNUM_LINEAR_COB_18W_Card_HD.png", "desc": "Extended modular linear luminaire featuring dark reflector louvers for exceptional visual comfort without direct line-of-sight discomfort.", "lumens": "1,700 lm", "cct": "3000K \u00b7 4000K", "cri": "CRI >90", "beam": "24\u00b0 / 36\u00b0", "ip": "IP20", "cutout": "330 \u00d7 22 \u00d7 45 mm", "finishes": "Matte Black, Architectural White", "mounting": "Magnetic / Profile Insert"}, {"id": "magnum-cob-24", "collection": "industrial", "subcat": "linear", "num": "16 / INDUSTRIAL", "series": "MAGNUM SERIES", "name": "Magnum Modular Linear COB 24W", "power": "24W COB", "power_num": 24, "img": "images/products/5_MAGNUM_LINEAR_COB_24W_Card_HD.png", "desc": "High-output modular linear luminaire delivering 2,250 lumens for open collaborative office spaces and architectural corridors.", "lumens": "2,250 lm", "cct": "3000K \u00b7 4000K \u00b7 6000K", "cri": "CRI >90", "beam": "24\u00b0 / 36\u00b0 / 60\u00b0", "ip": "IP20", "cutout": "440 \u00d7 22 \u00d7 45 mm", "finishes": "Matte Black, Architectural White", "mounting": "Magnetic / Profile Insert"}, {"id": "storm-60", "collection": "outdoor", "subcat": "outdoor", "num": "17 / OUTDOOR", "series": "STORM SERIES", "name": "Storm 60W IP66 Heavy-Duty Flood", "power": "60W INDUSTRIAL", "power_num": 60, "img": "images/products/1_STORM_60W_HighClarity.jpg", "desc": "Heavy-duty industrial die-cast aluminum luminaire with toughened safety glass and 10kV surge protection. Built for perimeter, roadway, and architectural facade applications.", "lumens": "7,200 lm (120 lm/W)", "cct": "4000K \u00b7 5700K \u00b7 6500K", "cri": "CRI >75", "beam": "Asymmetric 60\u00b0\u00d7120\u00b0 / 90\u00b0", "ip": "IP66 / IK08", "cutout": "320 \u00d7 240 \u00d7 65 mm", "finishes": "Dark Graphite Grey Powder Coat", "mounting": "Adjustable Trunnion Bracket / Pole Mount"}, {"id": "storm-120", "collection": "outdoor", "subcat": "outdoor", "num": "18 / OUTDOOR", "series": "STORM SERIES", "name": "Storm 120W IP66 High-Output Luminaire", "power": "120W HIGH-POWER", "power_num": 120, "img": "images/products/2_STORM_120W_HighClarity.jpg", "desc": "High-lumen industrial floodlight delivering 14,400 lumens with advanced aerodynamic heat fins. Designed for logistics yards, sports grounds, and industrial facilities.", "lumens": "14,400 lm (120 lm/W)", "cct": "4000K \u00b7 5700K \u00b7 6500K", "cri": "CRI >75", "beam": "Asymmetric 60\u00b0\u00d7120\u00b0", "ip": "IP66 / IK08 / 10kV SPD", "cutout": "420 \u00d7 310 \u00d7 75 mm", "finishes": "Dark Graphite Grey Powder Coat", "mounting": "Universal Heavy-Duty Bracket"}, {"id": "ww-24", "collection": "outdoor", "subcat": "wallwashers", "num": "19 / OUTDOOR", "series": "WALL WASHER SERIES", "name": "Wall Washer 24W Fa\u00e7ade Grazer", "power": "24W GRAZER", "power_num": 24, "img": "images/products/3_WALL_WASHER_24W_HighClarity.jpg", "desc": "Slimline exterior wall grazing luminaire with precision elliptical optics. Delivers uniform vertical illumination across architectural facades and textured stone walls.", "lumens": "2,400 lm (100 lm/W)", "cct": "3000K \u00b7 4000K \u00b7 RGBW", "cri": "CRI >80", "beam": "10\u00b0\u00d745\u00b0 Elliptical Lens", "ip": "IP65 Exterior Grade", "cutout": "1000 \u00d7 42 \u00d7 45 mm", "finishes": "Anodized Silver / Dark Grey", "mounting": "Adjustable Tilt Brackets"}, {"id": "ww-36", "collection": "outdoor", "subcat": "wallwashers", "num": "20 / OUTDOOR", "series": "WALL WASHER SERIES", "name": "Wall Washer 36W High-Intensity Grazer", "power": "36W GRAZER", "power_num": 36, "img": "images/products/4_WALL_WASHER_36W_HighClarity.jpg", "desc": "High-intensity architectural exterior wall grazer with DMX512 control capability for dynamic color-changing facade illumination and landmark highlighting.", "lumens": "3,600 lm (100 lm/W)", "cct": "3000K \u00b7 4000K \u00b7 RGBW (DMX512)", "cri": "CRI >80", "beam": "15\u00b0\u00d740\u00b0 Optical Distribution", "ip": "IP66 / IK07", "cutout": "1000 \u00d7 52 \u00d7 55 mm", "finishes": "Graphite Grey Extruded Aluminum", "mounting": "Angle-Calibrated Heavy-Duty Brackets"}, {"id": "shimmer-custom", "collection": "decorative", "subcat": "custom", "num": "21 / DECORATIVE", "series": "CUSTOM & DECORATIVE", "name": "Shimmer Hospitality Luminaire", "power": "CUSTOM WATTAGE", "power_num": 25, "img": "images/products/Shimmer.png", "desc": "Signature bespoke decorative luminaire crafted for luxury dining spaces, boutique hotel lobbies, and executive suites requiring sculptural elegance and warm ambient glow.", "lumens": "Bespoke / Configured to brief", "cct": "2700K \u00b7 3000K Warm Dimming", "cri": "CRI >95", "beam": "Omnidirectional Diffuse", "ip": "IP20", "cutout": "Custom \u00d8 and suspension heights", "finishes": "Brushed Brass, Matte Black, Custom RAL", "mounting": "Suspended Pendant / Surface"}, {"id": "custom-oem", "collection": "decorative", "subcat": "custom", "num": "22 / CUSTOM", "series": "CUSTOM & OEM BUILDS", "name": "Bespoke Mould & OEM Fixture Build", "power": "MADE TO BRIEF", "power_num": 50, "img": "images/design-workspace.jpg", "desc": "End-to-end custom fixture engineering from initial CAD concept, thermal modeling, and tool/mould development to full production runs at our Bengaluru facilities.", "lumens": "Engineered to exact brief", "cct": "Any CCT / Tunable White / RGBW", "cri": "Up to CRI >98", "beam": "Custom Reflector & Lens Engineering", "ip": "IP20 to IP68 Submersible", "cutout": "Engineered to Project Drawings", "finishes": "Any Custom RAL Powder Coat or Anodizing", "mounting": "Custom Integration"}];
+  let curCol = 'all';
+  let curPwr = 'all';
+  let curQ = '';
+
+  function renderGrid() {
+    const grid = document.getElementById('mainGrid');
+    const empty = document.getElementById('noResultsMsg');
+    const count = document.getElementById('prodCount');
+    if (!grid) return;
+
+    const filtered = DATA.filter(p => {
+      // Collection filter (matching website categories)
+      if (curCol !== 'all' && p.collection !== curCol) return false;
+
+      // Power filter
+      if (curPwr === 'under15' && p.power_num > 9) return false;
+      if (curPwr === '12to25' && (p.power_num < 10 || p.power_num > 25)) return false;
+      if (curPwr === '30to50' && (p.power_num < 30 || p.power_num > 50)) return false;
+      if (curPwr === '60plus' && p.power_num < 60) return false;
+
+      // Search filter
+      if (curQ) {
+        const q = curQ.toLowerCase();
+        const hit = p.name.toLowerCase().includes(q) ||
+                    p.series.toLowerCase().includes(q) ||
+                    p.desc.toLowerCase().includes(q) ||
+                    p.power.toLowerCase().includes(q) ||
+                    p.cct.toLowerCase().includes(q) ||
+                    p.finishes.toLowerCase().includes(q);
+        if (!hit) return false;
+      }
+      return true;
+    });
+
+    if (count) count.textContent = `Showing ${filtered.length} of ${DATA.length} products`;
+
+    if (filtered.length === 0) {
+      grid.innerHTML = '';
+      if (empty) empty.style.display = 'block';
+      return;
+    }
+
+    if (empty) empty.style.display = 'none';
+
+    grid.innerHTML = filtered.map(p => {
+      const waMsg = encodeURIComponent(`Hello LEDONIX, I am interested in specifications and quotation for ${p.name} (${p.power}). Please share details.`);
+      const waUrl = `https://wa.me/919686331758?text=${waMsg}`;
+
+      return `
+        <article class="product-card">
+          <div class="product-img">
+            <img src="${p.img}" alt="${p.name}" loading="lazy"/>
+            <span class="product-num">${p.num}</span>
+            <span class="product-power-tag">${p.power}</span>
+          </div>
+          <div class="product-info">
+            <span class="product-series">${p.series}</span>
+            <h3>${p.name}</h3>
+            <p>${p.desc}</p>
+            
+            <div class="spec-chip-box">
+              <div><small>LUMENS</small><strong>${p.lumens.split(' ')[0]} lm</strong></div>
+              <div><small>BEAM</small><strong>${p.beam.split(' ')[0]}</strong></div>
+              <div><small>COLOR</small><strong>${p.cri}</strong></div>
+              <div><small>PROTECTION</small><strong>${p.ip.split(' ')[0]}</strong></div>
+            </div>
+
+            <div class="product-actions">
+              <button class="btn-specs" onclick="openDetails('${p.id}')">Specs ↗</button>
+              <a class="btn-wa" href="${waUrl}" target="_blank" rel="noopener noreferrer">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.698.077-2.222-.56-1.579-.661-2.617-2.261-2.701-2.373-.083-.112-.663-.883-.663-1.684 0-.801.42-1.196.571-1.36.151-.164.331-.205.441-.205.11 0 .221.002.317.006.102.005.239-.039.373.286.138.334.471 1.15.513 1.234.041.085.069.183.014.293-.055.11-.083.178-.166.273-.082.096-.174.215-.248.288-.083.082-.17.171-.073.337.097.165.433.714.929 1.156.638.568 1.175.744 1.341.826.166.083.262.069.36-.041.096-.111.413-.482.523-.647.11-.166.221-.138.373-.083.151.055.965.455 1.131.537.166.083.276.124.317.193.042.069.042.405-.102.81z"/></svg>
+                Enquire
+              </a>
+            </div>
+          </div>
+        </article>
+      `;
+    }).join('');
+  }
+
+  // Bind collection buttons
+  document.querySelectorAll('#collectionTabs .coll-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('#collectionTabs .coll-btn').forEach(b => {
+        b.classList.remove('active');
+        b.style.background = '#fafbfa';
+        b.style.borderColor = '#e0e4df';
+        b.style.color = '#444';
+      });
+      btn.classList.add('active');
+      btn.style.background = '#111';
+      btn.style.borderColor = '#111';
+      btn.style.color = '#fff';
+      curCol = btn.getAttribute('data-col');
+      renderGrid();
+    });
+  });
+
+  // Bind power filter buttons
+  document.querySelectorAll('#powerFilters .pwr-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('#powerFilters .pwr-btn').forEach(b => {
+        b.classList.remove('active');
+        b.style.background = 'transparent';
+        b.style.borderColor = '#d4dad2';
+        b.style.color = '#555';
+      });
+      btn.classList.add('active');
+      btn.style.background = '#fce8e9';
+      btn.style.borderColor = '#ed2939';
+      btn.style.color = '#b5121b';
+      curPwr = btn.getAttribute('data-pwr');
+      renderGrid();
+    });
+  });
+
+  // Search input
+  const searchEl = document.getElementById('prodSearch');
+  if (searchEl) {
+    searchEl.addEventListener('input', (e) => {
+      curQ = e.target.value.trim();
+      renderGrid();
+    });
+  }
+
+  window.resetAllFilters = function() {
+    if (searchEl) searchEl.value = '';
+    curQ = '';
+    curCol = 'all';
+    curPwr = 'all';
+    const allColBtn = document.querySelector('#collectionTabs .coll-btn[data-col="all"]');
+    if (allColBtn) allColBtn.click();
+    const allPwrBtn = document.querySelector('#powerFilters .pwr-btn[data-pwr="all"]');
+    if (allPwrBtn) allPwrBtn.click();
+  };
+
+  window.openDetails = function(id) {
+    const p = DATA.find(x => x.id === id);
+    if (!p) return;
+    document.getElementById('modalProductImg').src = p.img;
+    document.getElementById('modalProductImg').alt = p.name;
+    document.getElementById('modalProductSeries').textContent = p.series;
+    document.getElementById('modalProductTitle').textContent = p.name;
+    document.getElementById('modalProductDesc').textContent = p.desc;
+    document.getElementById('modalProductPower').textContent = p.power;
+    document.getElementById('modalProductLumens').textContent = p.lumens;
+    document.getElementById('modalProductCct').textContent = p.cct;
+    document.getElementById('modalProductCri').textContent = p.cri;
+    document.getElementById('modalProductBeam').textContent = p.beam;
+    document.getElementById('modalProductIp').textContent = p.ip;
+    document.getElementById('modalProductCutout').textContent = p.cutout;
+    document.getElementById('modalProductFinishes').textContent = p.finishes;
+    document.getElementById('modalProductMounting').textContent = p.mounting;
+
+    const waMsg = encodeURIComponent(`Hello LEDONIX, please share detailed photometric datasheet and quote for: ${p.name} (${p.power})`);
+    document.getElementById('modalProductWaLink').href = `https://wa.me/919686331758?text=${waMsg}`;
+
+    const backdrop = document.getElementById('prodModalBackdrop');
+    if (backdrop) backdrop.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  };
+
+  window.closeProdModal = function() {
+    const backdrop = document.getElementById('prodModalBackdrop');
+    if (backdrop) backdrop.style.display = 'none';
+    document.body.style.overflow = '';
+  };
+
+  // Check URL hash on initial load (e.g. products.html#architectural or products.html#downlights)
+  window.addEventListener('DOMContentLoaded', () => {
+    const rawHash = window.location.hash.replace('#', '').toLowerCase();
+    if (!rawHash) {
+      renderGrid();
+      return;
+    }
+
+    if (['architectural', 'outdoor', 'industrial', 'decorative'].includes(rawHash)) {
+      const tab = document.querySelector(`#collectionTabs .coll-btn[data-col="${rawHash}"]`);
+      if (tab) tab.click();
+    } else if (['downlights', 'track', 'linear', 'wallwashers', 'floodlights', 'custom'].includes(rawHash)) {
+      const searchBox = document.getElementById('prodSearch');
+      if (searchBox) {
+        if (rawHash === 'downlights') {
+          searchBox.value = 'Allora';
+        } else if (rawHash === 'track') {
+          searchBox.value = 'Meraki';
+        } else if (rawHash === 'linear') {
+          searchBox.value = 'Magnum';
+        } else if (rawHash === 'wallwashers') {
+          searchBox.value = 'Wall Washer';
+        } else if (rawHash === 'floodlights') {
+          searchBox.value = 'Storm';
+        } else if (rawHash === 'custom') {
+          searchBox.value = 'Shimmer';
+        }
+        curQ = searchBox.value;
+      }
+      renderGrid();
+    } else {
+      renderGrid();
+    }
+  });
+})();
+</script>
+</body>
+</html>

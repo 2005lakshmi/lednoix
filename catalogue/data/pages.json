@@ -1,0 +1,72 @@
+{
+  "title": "Ledonix Catalogue",
+  "page_width": 1100,
+  "page_height": 1540,
+  "total_pages": 8,
+  "pages": [
+    {
+      "page": 1,
+      "type": "cover",
+      "img": "images/pages/page-001.jpg",
+      "thumb": "images/thumbs/page-001.jpg",
+      "caption": null,
+      "product_url": null
+    },
+    {
+      "page": 2,
+      "type": "product",
+      "img": "images/pages/page-002.jpg",
+      "thumb": "images/thumbs/page-002.jpg",
+      "caption": "Page 2",
+      "product_url": null
+    },
+    {
+      "page": 3,
+      "type": "product",
+      "img": "images/pages/page-003.jpg",
+      "thumb": "images/thumbs/page-003.jpg",
+      "caption": "Page 3",
+      "product_url": null
+    },
+    {
+      "page": 4,
+      "type": "product",
+      "img": "images/pages/page-004.jpg",
+      "thumb": "images/thumbs/page-004.jpg",
+      "caption": "Page 4",
+      "product_url": null
+    },
+    {
+      "page": 5,
+      "type": "product",
+      "img": "images/pages/page-005.jpg",
+      "thumb": "images/thumbs/page-005.jpg",
+      "caption": "Page 5",
+      "product_url": null
+    },
+    {
+      "page": 6,
+      "type": "product",
+      "img": "images/pages/page-006.jpg",
+      "thumb": "images/thumbs/page-006.jpg",
+      "caption": "Page 6",
+      "product_url": null
+    },
+    {
+      "page": 7,
+      "type": "product",
+      "img": "images/pages/page-007.jpg",
+      "thumb": "images/thumbs/page-007.jpg",
+      "caption": "Page 7",
+      "product_url": null
+    },
+    {
+      "page": 8,
+      "type": "cover",
+      "img": "images/pages/page-008.jpg",
+      "thumb": "images/thumbs/page-008.jpg",
+      "caption": null,
+      "product_url": null
+    }
+  ]
+}

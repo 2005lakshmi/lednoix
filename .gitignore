@@ -1,0 +1,9 @@
+# Raw conversion utilities and heavy binaries
+**/pdf_tool/
+**/poppler/
+LEDONIX WEBISITE files/
+
+# OS and Editor files
+.DS_Store
+Thumbs.db
+*.tmp
