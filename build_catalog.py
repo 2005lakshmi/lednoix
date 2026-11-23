@@ -1,0 +1,836 @@
+import json
+import os
+
+catalog_data = {
+  "metadata": {
+    "version": "2.0.0",
+    "updated": "2026-11-22",
+    "brand": "LEDONIX Technologies Private Limited",
+    "total_categories": 8
+  },
+  "categories": [
+    {
+      "id": "cob",
+      "slug": "cob",
+      "hash": "#cob",
+      "nav_title": "> COB LIGHTS",
+      "name": "COB Lights & Precision Spotlights",
+      "badge": "01 / DIRECTIONAL FOCUS",
+      "tagline": "Deep recessed precision optics with ultra-low glare (UGR < 19).",
+      "desc": "Engineered with precision-faceted specular reflectors and high-purity die-cast aluminum heat sinks. LEDONIX COB fixtures provide controlled contrast, immaculate beam cut-off, and high-fidelity color rendering for discerning luxury interiors.",
+      "products": [
+        {
+          "id": "allora-1",
+          "code": "LNX-COB-AL1-9W",
+          "title": "ALLORA I — NEO COB SPOT LIGHT 9W",
+          "series": "ALLORA ARCHITECTURAL SERIES",
+          "category_tag": "01 / COB LIGHTS",
+          "badge": "UGR < 19 · PRECISION COB",
+          "img": "images/products/1_ALLORA_I_9W_Card_UltraHD.png",
+          "catalogue_page": 2,
+          "desc": "The Allora I is an architectural-grade recessed COB spotlight designed for high-contrast accentuation and quiet ceiling lines. Featuring an optical-grade faceted aluminum reflector, it directs 900 lumens of glare-free light precisely onto artwork, retail merchandise, and dining surfaces.",
+          "specs": {
+            "Wattage": "9W High-Output COB",
+            "Luminous Flux": "900 lm (100 lm/W Efficacy)",
+            "CCT (Color Temp)": "2700K · 3000K · 4000K · 6000K",
+            "Beam Angles": "15° Spot · 24° Medium · 36° Flood",
+            "Color Rendering": "CRI ≥ 90 (R9 > 55 High Fidelity)",
+            "Visual Comfort": "UGR < 19 Ultra-Low Glare Baffle",
+            "Cut-out Dimensions": "Ø85 × 92 mm (Ceiling Cutout Ø75 mm)",
+            "Body Finish": "Architectural Matte Black / Pure White",
+            "Ingress Rating": "IP20 / IP44 Moisture-Resistant Option",
+            "Mounting System": "High-Tension Stainless Steel Spring Clips"
+          },
+          "highlights": [
+            "Die-cast ADC12 aluminum thermal housing with aerodynamic convection fins for 50,000h lifespan",
+            "Specular vacuum-metallized reflector eliminating light halos and chromatic aberration",
+            "Isolated flicker-free constant-current driver (PF > 0.95, THD < 10%, Ripple < 1%)",
+            "Phase-dimmable, 0-10V, and DALI-2 architectural control compatibility"
+          ]
+        },
+        {
+          "id": "allora-3",
+          "code": "LNX-COB-AL3-9W",
+          "title": "ALLORA III — SLIM-TRIM COB DOWNLIGHT 9W",
+          "series": "ALLORA ARCHITECTURAL SERIES",
+          "category_tag": "01 / COB LIGHTS",
+          "badge": "SLIM-TRIM · CONTINUOUS DUTY",
+          "img": "images/products/3_ALLORA_III_9W_Card_UltraHD.png",
+          "catalogue_page": 4,
+          "desc": "Featuring a minimal 1.5mm micro-bezel, Allora III blurs the boundary between ceiling and luminaire. Specially engineered for commercial continuous operation, corporate headquarters, and high-traffic hospitality corridors where thermal stamina is essential.",
+          "specs": {
+            "Wattage": "9W COB System Power",
+            "Luminous Flux": "850 lm",
+            "CCT (Color Temp)": "3000K Warm · 4000K Neutral · 6000K Cool",
+            "Beam Angles": "24° Accent · 36° General · 60° Wide",
+            "Color Rendering": "CRI ≥ 90",
+            "Visual Comfort": "Dark-cone anti-dazzle chamber",
+            "Cut-out Dimensions": "Ø90 × 88 mm (Ceiling Cutout Ø80 mm)",
+            "Body Finish": "Matte Architectural Black / Pure White",
+            "Ingress Rating": "IP20 Interior Specification",
+            "Mounting System": "Spring-loaded ceiling retention wings"
+          },
+          "highlights": [
+            "Minimalist micro-lip outer trim that sits flush against plasterboard ceilings",
+            "Heavy-gauge extruded aluminum heat pipe preventing thermal lumen degradation",
+            "Quick-connect plug-and-play driver harness for rapid site installation",
+            "High efficacy Cree COB LED array with MacAdam Step 3 ellipse consistency"
+          ]
+        },
+        {
+          "id": "allora-double",
+          "code": "LNX-COB-AL2X-18W",
+          "title": "ALLORA DOUBLE — DUAL GIMBAL COB 18W",
+          "series": "ALLORA ARCHITECTURAL SERIES",
+          "category_tag": "01 / COB LIGHTS",
+          "badge": "DUAL GIMBAL · INDEPENDENT TILT",
+          "img": "images/products/5_ALLORA_9W_X_2_Card_UltraHD.png",
+          "catalogue_page": 5,
+          "desc": "A twin-engine architectural directional luminaire housing two independent 9W COB modules within a single seamless rectangular cutout. Both heads offer 30° bi-axial gimbal tilt, allowing simultaneous illumination of gallery art and adjacent walkways.",
+          "specs": {
+            "Wattage": "18W (2 × 9W Independent Engines)",
+            "Luminous Flux": "1,650 lm Total Output",
+            "CCT (Color Temp)": "3000K Warm White · 4000K Natural",
+            "Beam Angles": "15° Spot / 24° Medium / 36° Flood",
+            "Color Rendering": "CRI ≥ 90 (High Texture Depth)",
+            "Visual Comfort": "Dual recessed black baffle chambers",
+            "Cut-out Dimensions": "160 × 88 × 95 mm (Cutout 145 × 75 mm)",
+            "Body Finish": "Architectural Matte Black / Signal White",
+            "Ingress Rating": "IP20 Recessed Ceiling Grade",
+            "Mounting System": "Adjustable spring brackets for 9–25mm ceiling boards"
+          },
+          "highlights": [
+            "Two independently articulable gimbal rings with precision friction hinges",
+            "Eliminates ceiling clutter by serving dual directional lighting tasks from one opening",
+            "Supplied with twin isolated drivers or single dual-channel dimming controller",
+            "Engineered for boutique fashion retail, gallery walls, and luxury private residences"
+          ]
+        },
+        {
+          "id": "allora-pinhole-accent",
+          "code": "LNX-COB-PIN-9W",
+          "title": "NEO PINHOLE — MICRO-APERTURE ACCENT COB 9W",
+          "series": "ALLORA ARCHITECTURAL SERIES",
+          "category_tag": "01 / COB LIGHTS",
+          "badge": "MICRO-APERTURE · GALLERY OPTIC",
+          "img": "images/products/2_ALLORA_II_9W_Pinhole_Photo_HD.png",
+          "catalogue_page": 3,
+          "desc": "Delivers dramatically concentrated illumination through an ultra-narrow 28mm aperture. The light source remains virtually invisible to the eye until stepping directly beneath the beam cone, creating breathtaking floating illumination.",
+          "specs": {
+            "Wattage": "9W High-Luminance Micro COB",
+            "Luminous Flux": "780 lm Focused Center-Beam",
+            "CCT (Color Temp)": "2700K Warm Dim · 3000K · 4000K",
+            "Beam Angles": "12° Narrow Spot · 24° Controlled Accent",
+            "Color Rendering": "CRI ≥ 92 (Gallery Grade Color Purity)",
+            "Visual Comfort": "Deep recessed pinhole baffle (Zero glare angle)",
+            "Cut-out Dimensions": "Ø80 × 95 mm (Ceiling Cutout Ø70 mm)",
+            "Body Finish": "Deep Black Matte Anodized / Fine White",
+            "Ingress Rating": "IP20 Visual Architecture Grade",
+            "Mounting System": "Precision torsion spring assembly"
+          },
+          "highlights": [
+            "Ultra-quiet ceiling profile with hidden light emitter for minimalist interiors",
+            "High center-beam candlepower (CBCP) for sculpture and jewelry vitrines",
+            "Compatible with honeycomb hex-louvers and softening lenses for customized beam sculpting",
+            "Zero ceiling spill or halo scatter"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "downlights",
+      "slug": "downlights",
+      "hash": "#downlights",
+      "nav_title": "> RECESSED DOWNLIGHTS",
+      "name": "Recessed Architectural Downlights",
+      "badge": "02 / ARCHITECTURAL CEILINGS",
+      "tagline": "Quiet ceiling aesthetics with comfortable ambient illumination.",
+      "desc": "Micro-aperture pinholes, square contemporary bezels, and seamless trimless plaster-in frames designed to integrate silently into luxury ceilings while delivering uniform visual comfort.",
+      "products": [
+        {
+          "id": "allora-2-downlight",
+          "code": "LNX-DL-AL2-9W",
+          "title": "ALLORA II — ANTI-GLARE PINHOLE DOWNLIGHT 9W",
+          "series": "ALLORA DOWNLIGHT SERIES",
+          "category_tag": "02 / RECESSED DOWNLIGHTS",
+          "badge": "ANTI-GLARE · UGR < 16",
+          "img": "images/products/2_ALLORA_II_9W_Card_UltraHD.png",
+          "catalogue_page": 3,
+          "desc": "Allora II is the gold standard for executive suites and private residential sanctuaries where glare must be eliminated. Its deep secondary reflector shields the light source up to a 45° viewing angle, maintaining dark, quiet ceiling lines.",
+          "specs": {
+            "Wattage": "9W Low-Glare Architectural LED",
+            "Luminous Flux": "780 lm",
+            "CCT (Color Temp)": "2700K · 3000K · 4000K",
+            "Beam Angles": "12° Narrow Spot · 24° Medium",
+            "Color Rendering": "CRI ≥ 92 (Natural Skin & Wood Tone Fidelity)",
+            "Visual Comfort": "UGR < 16 (Anti-Dazzle Architectural Baffle)",
+            "Cut-out Dimensions": "Ø80 × 95 mm (Ceiling Cutout Ø70 mm)",
+            "Body Finish": "Architectural Matte Black / Crisp White",
+            "Ingress Rating": "IP20 / Optional IP44 Splashproof",
+            "Mounting System": "Spring-steel ceiling clips"
+          },
+          "highlights": [
+            "Deep optical well ensures that the ceiling appears dark and unlit from side angles",
+            "Aesthetic conical baffle available in matching black, white, or specular chrome",
+            "Compatible with DALI, Triac, and 0-10V smart automation dimmers",
+            "Optimal for luxury bedrooms, home theatres, dining rooms, and executive boardrooms"
+          ]
+        },
+        {
+          "id": "allora-square-downlight",
+          "code": "LNX-DL-SQ-9W",
+          "title": "ALLORA SQUARE — GEOMETRIC RECESSED DOWNLIGHT 9W",
+          "series": "ALLORA DOWNLIGHT SERIES",
+          "category_tag": "02 / RECESSED DOWNLIGHTS",
+          "badge": "GEOMETRIC BEZEL · MODERNIST",
+          "img": "images/products/4_ALLORA_9W_Square_Card_UltraHD.png",
+          "catalogue_page": 5,
+          "desc": "Clean right angles and crisp architectural geometry. Allora Square is tailored for contemporary interior schemes featuring grid ceilings, rectangular wood paneling, or linear architectural reveals.",
+          "specs": {
+            "Wattage": "9W COB Engine",
+            "Luminous Flux": "820 lm",
+            "CCT (Color Temp)": "3000K Warm · 4000K Neutral White",
+            "Beam Angles": "24° Accent · 36° General Flood",
+            "Color Rendering": "CRI ≥ 90",
+            "Visual Comfort": "Deep recessed square anti-glare chamber",
+            "Cut-out Dimensions": "85 × 85 × 90 mm (Cutout 75 × 75 mm)",
+            "Body Finish": "Matte Architectural Black / Pure White",
+            "Ingress Rating": "IP20 Interior Recessed",
+            "Mounting System": "Dual-wing precision ceiling springs"
+          },
+          "highlights": [
+            "Seamless square die-cast bezel machined from solid aviation aluminum",
+            "Round circular internal cut-out option for easy drilling and fast alignment",
+            "Ultra-low glare design with secondary black specular inner bezel",
+            "Engineered for modern art galleries, luxury penthouses, and architectural studios"
+          ]
+        },
+        {
+          "id": "circolo-commercial",
+          "code": "LNX-DL-CIR-15W",
+          "title": "CIRCOLO — ARCHITECTURAL DOWNLIGHT 15W",
+          "series": "CIRCOLO SERIES",
+          "category_tag": "02 / RECESSED DOWNLIGHTS",
+          "badge": "HIGH LUMEN · COMMERCIAL GRADE",
+          "img": "images/product-downlight.jpg",
+          "catalogue_page": 6,
+          "desc": "Engineered for high-volume ambient ceiling illumination in corporate headquarters, hotel lobbies, and upscale residential double-height foyers. Generates 1,500 lumens with wide optical diffusion.",
+          "specs": {
+            "Wattage": "15W High-Efficacy LED",
+            "Luminous Flux": "1,500 lm (100 lm/W)",
+            "CCT (Color Temp)": "3000K · 4000K · 6000K",
+            "Beam Angles": "60° Wide Flood · 90° Diffuse",
+            "Color Rendering": "CRI ≥ 85 / Optional CRI ≥ 90",
+            "Visual Comfort": "Low-brightness micro-prismatic ring",
+            "Cut-out Dimensions": "Ø120 × 75 mm (Ceiling Cutout Ø105 mm)",
+            "Body Finish": "Powder-coated Matte White / Black Ring",
+            "Ingress Rating": "IP44 Moisture-Sealed Front Face",
+            "Mounting System": "Heavy-duty torsion springs"
+          },
+          "highlights": [
+            "Uniform light distribution without hot spots or scalloping lines on nearby walls",
+            "IP44 sealed front baffle suitable for restrooms, covered verandas, and luxury spa foyers",
+            "High power factor driver (PF > 0.98) with full EMC compliance",
+            "Designed for 24/7 continuous duty in commercial and residential settings"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "strip",
+      "slug": "strip",
+      "hash": "#strip",
+      "nav_title": "> STRIP AND ROPE LIGHTS",
+      "name": "Linear Strip & Silicone Neon Flex",
+      "badge": "03 / COVE & CONTOUR",
+      "tagline": "Continuous dot-free linear illumination and architectural contouring.",
+      "desc": "High-density COB dotless strips and IP67/IP68 UV-resistant silicone neon flex for soft indirect cove lighting, under-cabinet millwork details, and exterior facade accents.",
+      "products": [
+        {
+          "id": "lumina-cob-strip",
+          "code": "LNX-ST-COB-14W",
+          "title": "LUMINA COB — DOTLESS ARCHITECTURAL STRIP 14W/M",
+          "series": "LUMINA COB SERIES",
+          "category_tag": "03 / STRIP AND ROPE LIGHTS",
+          "badge": "DOTLESS COB · CRI 95",
+          "img": "images/project-linear-lighting.jpg",
+          "catalogue_page": 7,
+          "desc": "Featuring 480 high-efficiency micro-LED chips per meter under a continuous phosphor silicone jacket. Lumina COB produces unbroken, completely dot-free ribbons of light even in shallow aluminum profiles with clear diffusers.",
+          "specs": {
+            "Wattage": "14W per Meter (24V DC Safe Constant Voltage)",
+            "Luminous Flux": "1,400 lm/m (High Efficiency)",
+            "CCT (Color Temp)": "2700K Ultra-Warm · 3000K Warm · 4000K Neutral",
+            "Beam Angles": "180° Continuous Flat Glow",
+            "Color Rendering": "CRI ≥ 95 (Full Spectrum R1-R15 High Color Purity)",
+            "Visual Comfort": "100% Dotless Seamless Phosphor Matrix",
+            "Cut-out Dimensions": "Width 8mm × Height 2mm (Cuttable every 50mm)",
+            "Body Finish": "Double-Layer 3oz Pure Copper PCB",
+            "Ingress Rating": "IP20 Indoor / IP65 Silicone Nano-Coating",
+            "Mounting System": "High-Tack 3M 300LSE Industrial Thermal Adhesive"
+          },
+          "highlights": [
+            "Eliminates individual diode reflection dots on polished marble and granite surfaces",
+            "3oz copper trace prevents voltage drop across long runs up to 10 meters",
+            "Ultra-smooth PWM and DALI dimming from 100% down to 0.1% without stepping",
+            "Ideal for false ceiling coves, floating cabinetry, and wall-wash recesses"
+          ]
+        },
+        {
+          "id": "proflex-neon-silicone",
+          "code": "LNX-NF-SIL-12W",
+          "title": "PROFLEX NEON — ARCHITECTURAL SILICONE FLEX 12W/M",
+          "series": "PROFLEX NEON SERIES",
+          "category_tag": "03 / STRIP AND ROPE LIGHTS",
+          "badge": "IP67 SILICONE · UV RESISTANT",
+          "img": "images/project-outdoor-rgb.jpg",
+          "catalogue_page": 8,
+          "desc": "An architectural-grade, food-grade silicone extruded neon profile that curves gracefully around circular architectural columns, facade reveals, and organic interior partitions. UV-stabilized, salt-spray resistant, and fully IP67 weatherproof.",
+          "specs": {
+            "Wattage": "12W per Meter (24V DC)",
+            "Luminous Flux": "980 lm/m Homogeneous Light Emitting Surface",
+            "CCT (Color Temp)": "2700K · 3000K · 4000K · RGBW Programmable",
+            "Beam Angles": "120° Side-Bend or Top-Bend Optics",
+            "Color Rendering": "CRI ≥ 90",
+            "Visual Comfort": "Completely diffuse opal silicone extrusion",
+            "Cut-out Dimensions": "Width 12mm × Height 12mm (Custom Run Lengths)",
+            "Body Finish": "Milky Translucent Virgin Silicone Housing",
+            "Ingress Rating": "IP67 Weatherproof / IP68 Submersible Ends",
+            "Mounting System": "Aluminum mounting channels & stainless locking clips"
+          },
+          "highlights": [
+            "Food-grade silicone compound will never yellow, crack or degrade under tropical UV radiation",
+            "Bend radius of 60mm allows dynamic free-form architectural lighting designs",
+            "Available in both Top-Bend and Side-Bend configurations for vertical or horizontal curvature",
+            "Extensively deployed in luxury hotels, resort landscaping, and exterior perimeter coves"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "panel",
+      "slug": "panel",
+      "hash": "#panel",
+      "nav_title": "> PANEL & SURFACE LIGHTS",
+      "name": "Commercial Panels & Surface Downlights",
+      "badge": "04 / DIFFUSE & WORKSPACE",
+      "tagline": "Low-glare micro-prismatic panels and clean surface-mounted cylinders.",
+      "desc": "Engineered for sustained visual wellness and fatigue-free productivity in executive offices, commercial campuses, and design studios. Meets international UGR < 19 standards.",
+      "products": [
+        {
+          "id": "aura-panel-36w",
+          "code": "LNX-PNL-AUR-36W",
+          "title": "AURA 36W — MICRO-PRISMATIC OFFICE PANEL (UGR<19)",
+          "series": "AURA WORKSPACE SERIES",
+          "category_tag": "04 / PANEL & SURFACE LIGHTS",
+          "badge": "UGR < 19 · FLICKER-FREE",
+          "img": "images/Luxury Modern Office Lobby Reception.png",
+          "catalogue_page": 6,
+          "desc": "The Aura 36W is designed for high-performance corporate environments where visual ergonomics dictate worker focus and well-being. Its micro-prismatic German PMMA optic controls wide-angle light spill to achieve strict UGR < 19 compliance.",
+          "specs": {
+            "Wattage": "36W High-Efficacy Back-Lit Array",
+            "Luminous Flux": "4,320 lm (120 lm/W Class-Leading Efficiency)",
+            "CCT (Color Temp)": "4000K Natural Workplace · 5700K Daylight",
+            "Beam Angles": "90° Micro-Prismatic Controlled Beam",
+            "Color Rendering": "CRI ≥ 85 / CRI ≥ 90 High Spec",
+            "Visual Comfort": "UGR < 19 Ergonomic Office Compliance",
+            "Cut-out Dimensions": "595 × 595 × 32 mm (Standard 2×2 Ceiling Grid)",
+            "Body Finish": "Seamless Extruded Aluminum Frame / Powder White",
+            "Ingress Rating": "IP40 Dust-Sealed Front Optical Chamber",
+            "Mounting System": "Lay-in T-Bar Grid / Surface Frame / Suspension Kit"
+          },
+          "highlights": [
+            "Direct back-lit LED matrix eliminates the light loss and yellowing of edge-lit diffusers",
+            "Ultra-low ripple driver prevents eye fatigue and headache during screen-intensive tasks",
+            "Supplied with rapid push-in terminal connectors for tool-free electrical installation",
+            "Proven installations at Google, Infosys, and NetApp corporate facilities in Bengaluru"
+          ]
+        },
+        {
+          "id": "cylindro-surface-downlight",
+          "code": "LNX-SF-CYL-15W",
+          "title": "CYLINDRO — SURFACE ARCHITECTURAL CYLINDER 15W",
+          "series": "CYLINDRO SURFACE SERIES",
+          "category_tag": "04 / PANEL & SURFACE LIGHTS",
+          "badge": "SURFACE ARCHITECTURAL · MONOLITHIC",
+          "img": "images/product-commercial.jpg",
+          "catalogue_page": 4,
+          "desc": "When false ceilings are absent or concrete soffits are celebrated, Cylindro provides pure architectural presence. A monolithic cylindrical aluminum form with a deep-set COB reflector, offering sophisticated accent illumination on exposed concrete or wood ceilings.",
+          "specs": {
+            "Wattage": "15W Deep-Recessed COB",
+            "Luminous Flux": "1,450 lm Output",
+            "CCT (Color Temp)": "3000K Warm Amber · 4000K Neutral",
+            "Beam Angles": "24° Accent · 38° General Flood",
+            "Color Rendering": "CRI ≥ 90",
+            "Visual Comfort": "Deep interior glare-shielding stepped baffle",
+            "Cut-out Dimensions": "Ø85 × 165 mm Surface Height",
+            "Body Finish": "Matte Architectural Black / Pure White Anodized",
+            "Ingress Rating": "IP20 / Available IP54 Covered Porch Rating",
+            "Mounting System": "Twist-and-lock ceiling mounting baseplate"
+          },
+          "highlights": [
+            "Seamless tube machined with zero visible screws or external fasteners on outer surface",
+            "Integral high-PF driver hidden inside the upper cylinder housing",
+            "Easily converted into a suspended pendant fixture with matching braided fabric cord kit",
+            "Exceptional for loft-style apartments, boutique cafés, and exposed industrial ceilings"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "track",
+      "slug": "track",
+      "hash": "#track",
+      "nav_title": "> TRACK & MAGNETIC LIGHTS",
+      "name": "Track Lighting & Magnetic 48V Systems",
+      "badge": "05 / MODULAR & FLEXIBLE",
+      "tagline": "Tool-free repositionable spotlighting and low-voltage magnetic rails.",
+      "desc": "Multi-circuit 230V track spotlights with 350° rotation and ultra-minimal 48V low-voltage magnetic systems. Ideal for art galleries, luxury apparel boutiques, and evolving residential spaces.",
+      "products": [
+        {
+          "id": "meraki-15-track",
+          "code": "LNX-TRK-MRK-15W",
+          "title": "MERAKI 15W / 20W — 350° ROTATIONAL TRACK SPOT",
+          "series": "MERAKI TRACK SERIES",
+          "category_tag": "05 / TRACK & MAGNETIC LIGHTS",
+          "badge": "MUSEUM GRADE · 350° ROTATION",
+          "img": "images/products/1_MERAKI_15W_DualFinish_Showcase_1350px.png",
+          "catalogue_page": 1,
+          "desc": "The Meraki track series represents the pinnacle of directional flexibility. Engineered with a precision dual-axis joint offering 350° horizontal rotation and 90° vertical tilt, allowing lighting designers to effortlessly recalibrate focus whenever interior layouts shift.",
+          "specs": {
+            "Wattage": "15W / 20W High-Density COB",
+            "Luminous Flux": "1,350 lm (15W) · 1,850 lm (20W)",
+            "CCT (Color Temp)": "3000K · 4000K · 6000K",
+            "Beam Angles": "15° Precision Spot · 24° Medium · 38° Flood",
+            "Color Rendering": "CRI ≥ 92 (Museum Color Fidelity)",
+            "Visual Comfort": "Deep honeycomb louver accessory compatible",
+            "Cut-out Dimensions": "Ø60 × 140 mm Body (Universal Track Adapter)",
+            "Body Finish": "Architectural Matte Black / Fine White",
+            "Ingress Rating": "IP20 Track Luminaire",
+            "Mounting System": "Standard 3-Circuit / 1-Circuit European Specification Track"
+          },
+          "highlights": [
+            "Internal friction gear holds exact aiming angle without slipping over years of operation",
+            "Die-cast aluminum passive cooling chamber ensures zero audible fan noise",
+            "Supplied with multi-system track adapter compatible with Global, ERCO and Eurostandard rails",
+            "Widely specified for high-end fashion boutiques, museums, and contemporary living spaces"
+          ]
+        },
+        {
+          "id": "meraki-50-track",
+          "code": "LNX-TRK-MRK-50W",
+          "title": "MERAKI 30W / 50W — HIGH-BAY COMMERCIAL TRACK SPOT",
+          "series": "MERAKI TRACK SERIES",
+          "category_tag": "05 / TRACK & MAGNETIC LIGHTS",
+          "badge": "4,600 LUMENS · HIGH CEILING",
+          "img": "images/products/5_MERAKI_50W_DualFinish_Showcase_1350px.png",
+          "catalogue_page": 1,
+          "desc": "Built for towering heights in automobile showrooms, multi-story atriums, and department stores. Pumping out up to 4,600 lumens from a compact, sculptured cylinder, it punches through ambient light to illuminate focal merchandise.",
+          "specs": {
+            "Wattage": "30W / 50W High-Lumen Output",
+            "Luminous Flux": "2,800 lm (30W) · 4,600 lm (50W)",
+            "CCT (Color Temp)": "3000K Warm · 4000K Crisp Daylight",
+            "Beam Angles": "24° Tight Punch · 38° Medium · 60° Flood",
+            "Color Rendering": "CRI ≥ 90",
+            "Visual Comfort": "Anti-glare secondary snoot ring",
+            "Cut-out Dimensions": "Ø100 × 205 mm Track Body",
+            "Body Finish": "Matte Black / Signal White Industrial Coat",
+            "Ingress Rating": "IP20 Commercial Track Grade",
+            "Mounting System": "Heavy-duty locking track clamp"
+          },
+          "highlights": [
+            "Heavy-gauge extruded fin structure dissipates 50W with junction temps kept below 70°C",
+            "Optional DALI-2 individual addressability for automated scene transitions",
+            "High center-beam candlepower ensures sharp shadows and vibrant product pop",
+            "Designed for automobile flagships, furniture emporiums, and airport retail"
+          ]
+        },
+        {
+          "id": "cluster-track-spot",
+          "code": "LNX-TRK-CL9-9W",
+          "title": "CLUSTER 9×1W — MULTI-LENS TRACK SPOTLIGHT",
+          "series": "CLUSTER SERIES",
+          "category_tag": "05 / TRACK & MAGNETIC LIGHTS",
+          "badge": "MULTI-LENS · ZERO SPILL",
+          "img": "images/products/Black 9×1W LED Track Spotlight.png",
+          "catalogue_page": 1,
+          "desc": "A distinctive 9-aperture directional cluster projector. Each optical lens focuses a dedicated 1W emitter with laser-like precision, creating a dramatic high-contrast wash with sharp cutoffs and zero secondary glare.",
+          "specs": {
+            "Wattage": "9W (9 × 1W High-Power LEDs)",
+            "Luminous Flux": "950 lm High-Contrast Punch",
+            "CCT (Color Temp)": "3000K · 4000K",
+            "Beam Angles": "25° Optical PMMA Array Lenses",
+            "Color Rendering": "CRI ≥ 85",
+            "Visual Comfort": "Recessed multi-cell louver array",
+            "Cut-out Dimensions": "Ø70 × 150 mm Projector Head",
+            "Body Finish": "Deep Anodized Architectural Black",
+            "Ingress Rating": "IP20 Interior Accent",
+            "Mounting System": "Universal track adapter"
+          },
+          "highlights": [
+            "Nine individual optical lenses sculpt a unified, perfectly circular beam without scallops",
+            "Ideal for lighting isolated museum pedestals, luxury watches, and architectural stone textures",
+            "Sleek aerospace aluminum chassis with integrated passive cooling",
+            "Instant tool-free track repositioning"
+          ]
+        },
+        {
+          "id": "magnatrack-magnetic-system",
+          "code": "LNX-MAG-48V-SYS",
+          "title": "MAGNATRACK 48V — MODULAR LOW-VOLTAGE MAGNETIC RAIL",
+          "series": "MAGNATRACK SERIES",
+          "category_tag": "05 / TRACK & MAGNETIC LIGHTS",
+          "badge": "48V MAGNETIC · CLICK-IN",
+          "img": "images/products/magnum-track-product.jpg",
+          "catalogue_page": 8,
+          "desc": "The future of architectural flexibility. Low-voltage 48V magnetic rails embedded flush in drywall, surface-mounted on ceilings, or suspended on aerospace wire. Light modules click in place magnetically without turning off the system.",
+          "specs": {
+            "Wattage": "System Power: 48V DC Low Voltage (Up to 150W per Run)",
+            "Luminous Flux": "Interchangeable modules: 540 lm to 2,250 lm each",
+            "CCT (Color Temp)": "2700K · 3000K · 4000K · Tunable White (2700K–6500K)",
+            "Beam Angles": "Spot (15°/24°), Linear Diffuse (110°), Dark Louver (36°)",
+            "Color Rendering": "CRI ≥ 92 (Gallery Grade)",
+            "Visual Comfort": "Recessed channels shield all mechanical connectors",
+            "Cut-out Dimensions": "Channel Width 25mm × Height 45mm (Trimless/Surface)",
+            "Body Finish": "Deep Matte Black Anodized / Pure White",
+            "Ingress Rating": "IP20 Low-Voltage Safety",
+            "Mounting System": "Recessed Trimless / Surface Ceiling / Wire Suspension"
+          },
+          "highlights": [
+            "Safe 48V DC busbars allow users to reposition, swap, or add luminaires by hand in seconds",
+            "Mix and match spot modules, continuous linear diffusers, and hanging pendants on one track",
+            "DALI and Casambi wireless mesh dimming controls per individual fixture module",
+            "Preferred system for minimalist luxury residences, modern penthouses, and design agencies"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "linear",
+      "slug": "linear",
+      "hash": "#linear",
+      "nav_title": "> LINEAR & PENDANT LIGHTS",
+      "name": "Architectural Linear Profiles & Statement Pendants",
+      "badge": "06 / SEAMLESS & STATEMENT",
+      "tagline": "Continuous extruded profile trunking and bespoke sculptural pendants.",
+      "desc": "Continuous direct/indirect linear lighting profiles combined with bespoke handcrafted pendants and circular suspended rings tailored to custom diameters and project finishes.",
+      "products": [
+        {
+          "id": "magnum-linear-36w",
+          "code": "LNX-LIN-MG36-36W",
+          "title": "MAGNUM 36W — CONTINUOUS ARCHITECTURAL PROFILE",
+          "series": "MAGNUM LINEAR SERIES",
+          "category_tag": "06 / LINEAR & PENDANT LIGHTS",
+          "badge": "CONTINUOUS TRUNKING · DIRECT/INDIRECT",
+          "img": "images/products/1_MAGNUM_LINEAR_36W_Card_HD.png",
+          "catalogue_page": 2,
+          "desc": "A continuous extruded architectural luminaire that unites long architectural runs with pure, shadow-free lines of light. Available in 1.2m, 2.4m, or custom seamless continuous lengths with corner joiners and bi-directional up/down lighting.",
+          "specs": {
+            "Wattage": "36W (1.2m standard module) / 72W (2.4m)",
+            "Luminous Flux": "3,600 lm per 1.2m (100 lm/W)",
+            "CCT (Color Temp)": "3000K Warm · 4000K Neutral · 6000K Cool",
+            "Beam Angles": "110° Opal Uniform Diffuse / Optional Micro-Louver",
+            "Color Rendering": "CRI ≥ 85 / CRI ≥ 90",
+            "Visual Comfort": "Satin-finish polycarbonate opal lens",
+            "Cut-out Dimensions": "1200 × 50 × 75 mm (Custom continuous lengths)",
+            "Body Finish": "Anodized Silver / Matte Black / Architectural White",
+            "Ingress Rating": "IP20 Architectural Interior",
+            "Mounting System": "Suspended Wire / Surface Ceiling / Recessed Trimless"
+          },
+          "highlights": [
+            "Seamless light-tight push-fit diffuser prevents light leaks and gaps along continuous runs",
+            "Optional dual-circuit direct (70%) and indirect ceiling-uplight (30%) configuration",
+            "Precision mitered 90° corners, T-junctions, and X-cross pieces for geometric layouts",
+            "Selected for corporate headquarters, law firm boardrooms, and academic atriums"
+          ]
+        },
+        {
+          "id": "magnum-cob-louver",
+          "code": "LNX-LIN-MC24-24W",
+          "title": "MAGNUM COB 24W — MODULAR DARK LOUVER SYSTEM",
+          "series": "MAGNUM LINEAR SERIES",
+          "category_tag": "06 / LINEAR & PENDANT LIGHTS",
+          "badge": "DARK LOUVER · UGR < 16",
+          "img": "images/products/5_MAGNUM_LINEAR_COB_24W_Card_HD.png",
+          "catalogue_page": 4,
+          "desc": "Combining the sleek lines of linear profiles with the dramatic contrast of deep recessed COB optics. Individual multi-aperture black louvers conceal the light source, delivering punchy workstation task lighting with UGR < 16 comfort.",
+          "specs": {
+            "Wattage": "24W Modular High-Output COB",
+            "Luminous Flux": "2,250 lm Task Level",
+            "CCT (Color Temp)": "3000K · 4000K · 6000K",
+            "Beam Angles": "24° Medium · 36° Controlled Workplane",
+            "Color Rendering": "CRI ≥ 90 (High Visual Definition)",
+            "Visual Comfort": "UGR < 16 Low-Glare Black Honeycomb Louver",
+            "Cut-out Dimensions": "440 × 50 × 75 mm (Fits inside Magnum Channel)",
+            "Body Finish": "Architectural Matte Black / Fine White",
+            "Ingress Rating": "IP20 Interior Workspace",
+            "Mounting System": "Snap-in retention clips inside linear profile extrusion"
+          },
+          "highlights": [
+            "Provides concentrated desk illumination while eliminating screen reflections and direct glare",
+            "Can be interleaved with diffuse linear sections for zoned architectural rhythm",
+            "High power factor driver with full DALI-2 individual addressability",
+            "Engineered for tech headquarters, trading floors, and executive workstations"
+          ]
+        },
+        {
+          "id": "shimmer-pendant",
+          "code": "LNX-DEC-SHM-CUST",
+          "title": "SHIMMER — BESPOKE HOSPITALITY STATEMENT PENDANT",
+          "series": "CUSTOM & DECORATIVE SERIES",
+          "category_tag": "06 / LINEAR & PENDANT LIGHTS",
+          "badge": "BESPOKE SCULPTURAL · HANDCRAFTED",
+          "img": "images/products/Shimmer.png",
+          "catalogue_page": 7,
+          "desc": "A signature hospitality showpiece designed in collaboration with leading luxury interior consultants. Crafted from hand-finished brushed brass, fluted optical glass, and high-CRI warm dimming LED engines to create an unforgettable dining ambiance.",
+          "specs": {
+            "Wattage": "Custom Configured (Typical 25W–60W)",
+            "Luminous Flux": "Sculptural Ambient & Warm Downlight",
+            "CCT (Color Temp)": "2700K Warm · Dim-to-Warm (1800K to 3000K)",
+            "Beam Angles": "Omnidirectional Diffuse Glow + Accent Downlight",
+            "Color Rendering": "CRI ≥ 95 (Skin Tone Perfection)",
+            "Visual Comfort": "Hand-blown fluted diffuser with brass louvers",
+            "Cut-out Dimensions": "Custom Diameters & Suspension Heights",
+            "Body Finish": "Hand-Brushed Antique Brass / Matte Black / Polished Bronze",
+            "Ingress Rating": "IP20 Luxury Interior Decorative",
+            "Mounting System": "Reinforced aircraft cable & low-profile ceiling canopy"
+          },
+          "highlights": [
+            "Each fixture custom manufactured and hand-assembled in our Bengaluru facilities",
+            "Dim-to-warm technology simulates the cozy, romantic glow of halogen and candle flame",
+            "Custom suspension drops up to 6 meters for double-height grand staircases and hotel atriums",
+            "Featured in five-star boutique hotels, luxury fine dining restaurants, and private villas"
+          ]
+        },
+        {
+          "id": "halo-ring-pendant",
+          "code": "LNX-DEC-HALO-48W",
+          "title": "HALO — CIRCULAR SUSPENDED ARCHITECTURAL RING 48W",
+          "series": "CUSTOM & DECORATIVE SERIES",
+          "category_tag": "06 / LINEAR & PENDANT LIGHTS",
+          "badge": "CIRCULAR RING · DIRECT/INDIRECT",
+          "img": "images/project-ring-light.jpg",
+          "catalogue_page": 7,
+          "desc": "A flawless, seamless circular halo of light. Machined with precision seamless curve rollers, Halo features both downward illumination for tabletops and upward ceiling wash to lift the spatial volume of lobbies and conference tables.",
+          "specs": {
+            "Wattage": "48W (Ø900mm) / 75W (Ø1200mm) / 120W (Ø1800mm)",
+            "Luminous Flux": "4,800 lm (Ø900mm direct/indirect)",
+            "CCT (Color Temp)": "3000K Warm · 4000K Neutral White",
+            "Beam Angles": "120° Diffuse Opal Direct + 120° Indirect Uplight",
+            "Color Rendering": "CRI ≥ 90",
+            "Visual Comfort": "Uniform continuous 360° opal silicone diffuser",
+            "Cut-out Dimensions": "Diameters: Ø600mm · Ø900mm · Ø1200mm · Ø1800mm",
+            "Body Finish": "Matte Architectural Black / Brushed Gold / Custom RAL",
+            "Ingress Rating": "IP20 Interior Architectural",
+            "Mounting System": "3-Point adjustable stainless suspension system"
+          },
+          "highlights": [
+            "Seamless zero-gap curved outer profile rolled from high-purity aluminum extrusion",
+            "Independent dual-switching for direct ambient light and indirect ceiling glow",
+            "Clean canopy housing containing high-efficiency flicker-free drivers",
+            "A breathtaking centerpiece for boardrooms, reception foyers, and dining tables"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "outdoor",
+      "slug": "outdoor",
+      "hash": "#outdoor",
+      "nav_title": "> OUTDOOR LIGHTS",
+      "name": "Outdoor Façade Washers & Floodlights",
+      "badge": "07 / FAÇADE & WEATHERPROOF",
+      "tagline": "IP66 architectural wall grazing, floodlights and landscape luminaires.",
+      "desc": "Engineered to withstand harsh tropical climates. Features precision elliptical optics, 10kV surge protection, and marine-grade die-cast enclosures to sculpt architecture after dusk.",
+      "products": [
+        {
+          "id": "wall-washer-36w",
+          "code": "LNX-WW-36W-IP66",
+          "title": "WALL WASHER 36W — HIGH-INTENSITY FAÇADE GRAZER",
+          "series": "WALL WASHER SERIES",
+          "category_tag": "07 / OUTDOOR LIGHTS",
+          "badge": "IP66 / IK07 · ELLIPTICAL OPTIC",
+          "img": "images/products/4_WALL_WASHER_36W_HighClarity.jpg",
+          "catalogue_page": 8,
+          "desc": "Engineered specifically for exterior vertical surfaces. Its precision elliptical optics cast light across 4 to 8 vertical meters with tight horizontal confinement, highlighting textures on rough granite, stone cladding, and monumental architectural elevations.",
+          "specs": {
+            "Wattage": "36W High-Power Cree XP-E2 LED Array",
+            "Luminous Flux": "3,600 lm (100 lm/W)",
+            "CCT (Color Temp)": "3000K Warm · 4000K · DMX512 RGBW Dynamic",
+            "Beam Angles": "15° × 40° Asymmetric Elliptical Distribution",
+            "Color Rendering": "CRI ≥ 80 / CRI ≥ 90 Architectural Facade Grade",
+            "Visual Comfort": "Anti-glare secondary visor hood",
+            "Cut-out Dimensions": "1000 × 52 × 55 mm Slim Linear Profile",
+            "Body Finish": "Graphite Grey Anodized Marine-Grade Aluminum (6063-T5)",
+            "Ingress Rating": "IP66 Weatherproof / IK07 Impact Resistant",
+            "Mounting System": "Dual 180° angle-calibrated heavy-duty stainless brackets"
+          },
+          "highlights": [
+            "Elliptical beam distribution projects uniform vertical wash with minimal light pollution",
+            "Integrated breathing valve prevents moisture condensation inside the optical chamber",
+            "Available with DMX512 RDM color control for monumental building transformations",
+            "Installed at prominent luxury resorts, commercial IT parks, and civic monuments"
+          ]
+        },
+        {
+          "id": "storm-60-floodlight",
+          "code": "LNX-FLD-STM-60W",
+          "title": "STORM 60W — IP66 HEAVY-DUTY ARCHITECTURAL FLOOD",
+          "series": "STORM INDUSTRIAL & OUTDOOR",
+          "category_tag": "07 / OUTDOOR LIGHTS",
+          "badge": "IP66 / IK08 · 10kV SURGE",
+          "img": "images/products/1_STORM_60W_HighClarity.jpg",
+          "catalogue_page": 8,
+          "desc": "Built to endure extreme weather, heavy monsoon rain, and lightning surges. The Storm 60W combines high-lumen industrial toughness with the optical precision needed for landscaping, perimeter security, and facade projection.",
+          "specs": {
+            "Wattage": "60W Heavy-Duty Luminaire",
+            "Luminous Flux": "7,200 lm (120 lm/W Class-Leading Output)",
+            "CCT (Color Temp)": "4000K Neutral · 5700K Daylight · 6500K Industrial",
+            "Beam Angles": "Asymmetric 60° × 120° / Symmetric 90°",
+            "Color Rendering": "CRI ≥ 75 / CRI ≥ 80",
+            "Visual Comfort": "Anti-dazzle micro-faceted reflector optics",
+            "Cut-out Dimensions": "320 × 240 × 65 mm Die-Cast Housing",
+            "Body Finish": "Dark Graphite Grey Polyester Powder Coat (Anti-Corrosion)",
+            "Ingress Rating": "IP66 Dust & Water Jet Proof / IK08 Impact Rated",
+            "Mounting System": "Heavy-duty trunnion bracket with angle graduation marks"
+          },
+          "highlights": [
+            "Integrated 10kV surge protection device (SPD) protects driver against grid spikes",
+            "High-transmittance toughened safety glass with silicone gasket seal",
+            "Aerodynamic convection cooling fins keep thermal junction below safe thresholds",
+            "Proven performance in coastal and high-humidity environments across South India"
+          ]
+        },
+        {
+          "id": "storm-120-highbay",
+          "code": "LNX-FLD-STM-120W",
+          "title": "STORM 120W — HIGH-OUTPUT MAST & INDUSTRIAL LUMINAIRE",
+          "series": "STORM INDUSTRIAL & OUTDOOR",
+          "category_tag": "07 / OUTDOOR LIGHTS",
+          "badge": "14,400 LUMENS · HIGH MAST",
+          "img": "images/products/2_STORM_120W_HighClarity.jpg",
+          "catalogue_page": 8,
+          "desc": "The heavyweight workhorse of the LEDONIX outdoor family. Generating a massive 14,400 lumens, Storm 120W is engineered for high-mast area illumination, logistics container yards, sports facilities, and large-scale industrial factory compounds.",
+          "specs": {
+            "Wattage": "120W High-Power Industrial",
+            "Luminous Flux": "14,400 lm (120 lm/W Ultra-Efficient)",
+            "CCT (Color Temp)": "4000K · 5700K · 6500K",
+            "Beam Angles": "Asymmetric 60° × 120° Area Flood Optics",
+            "Color Rendering": "CRI ≥ 75",
+            "Visual Comfort": "Deep-set optic chamber minimizes stray skyward light",
+            "Cut-out Dimensions": "420 × 310 × 75 mm",
+            "Body Finish": "Marine-Grade AkzoNobel Powder Coated Aluminum",
+            "Ingress Rating": "IP66 / IK08 / 10kV SPD Built-In",
+            "Mounting System": "Reinforced 5mm thick steel trunnion mounting yoke"
+          },
+          "highlights": [
+            "Punches deep into outdoor spaces with superior asymmetric ground uniformity",
+            "Meanwell/Inventronics industrial driver with 5-year warranty operation",
+            "Resists high wind loads, vibration, and coastal corrosive salt fog",
+            "Deployed at logistics facilities, manufacturing plants, and outdoor sports grounds"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "battens",
+      "slug": "battens",
+      "hash": "#battens",
+      "nav_title": "> LED BATTENS & FITTINGS",
+      "name": "Industrial Weatherproof Battens & Linear Fittings",
+      "badge": "08 / FUNCTIONAL & UTILITY",
+      "tagline": "Corrosion-proof industrial battens and seamless linkable commercial fittings.",
+      "desc": "Rugged IK08 impact-resistant polycarbonate housings and high-efficiency optical diffusers designed for utility corridors, logistics hubs, basements, and demanding industrial facilities.",
+      "products": [
+        {
+          "id": "titan-ip65-batten",
+          "code": "LNX-BAT-TTN-36W",
+          "title": "TITAN 36W — IP65 WEATHERPROOF INDUSTRIAL BATTEN",
+          "series": "TITAN BATTEN SERIES",
+          "category_tag": "08 / LED BATTENS & FITTINGS",
+          "badge": "IP65 / IK08 · CORROSION-PROOF",
+          "img": "images/industrial-lighting.png",
+          "catalogue_page": 3,
+          "desc": "A heavy-duty non-corrosive linear fitting constructed with an injection-molded polycarbonate body and stainless steel closure latches. Impervious to water jets, dust ingress, and chemical fumes in commercial parking structures and production floors.",
+          "specs": {
+            "Wattage": "36W High-Lumen Linear Array",
+            "Luminous Flux": "4,320 lm (120 lm/W Industrial Efficacy)",
+            "CCT (Color Temp)": "4000K Neutral · 6500K Crisp Daylight",
+            "Beam Angles": "120° Wide Utility Spread",
+            "Color Rendering": "CRI ≥ 80",
+            "Visual Comfort": "Frosted polycarbonate diffuser with glare reduction ribs",
+            "Cut-out Dimensions": "1200 × 85 × 75 mm Linear Profile",
+            "Body Finish": "UV-Stabilized Grey Polycarbonate + Stainless Latches",
+            "Ingress Rating": "IP65 Water & Dust Tight / IK08 Impact Resistant",
+            "Mounting System": "Quick-click stainless surface clips or chain suspension"
+          },
+          "highlights": [
+            "Seamless poured-in-place polyurethane sealing gasket ensures permanent IP65 seal",
+            "High impact IK08 polycarbonate diffuser withstands mechanical shocks and vibrations",
+            "Through-wiring capability allows continuous daisy-chaining across long corridors",
+            "Widely utilized in multi-level parking decks, cold-storage warehouses, and factory workshops"
+          ]
+        },
+        {
+          "id": "slimline-batten-20w",
+          "code": "LNX-BAT-SLM-20W",
+          "title": "SLIMLINE 20W — LINKABLE COMMERCIAL BATTEN",
+          "series": "SLIMLINE BATTEN SERIES",
+          "category_tag": "08 / LED BATTENS & FITTINGS",
+          "badge": "SLIM PROFILE · LINKABLE",
+          "img": "images/product-linear-profile.jpg",
+          "catalogue_page": 2,
+          "desc": "An ultra-slim, lightweight architectural batten engineered for cove lighting, under-shelf retail displays, and commercial utility trunking. Features seamless male/female connectors for tool-free continuous light lines.",
+          "specs": {
+            "Wattage": "20W (1.2m module) / 10W (0.6m module)",
+            "Luminous Flux": "2,200 lm (110 lm/W)",
+            "CCT (Color Temp)": "3000K · 4000K · 6500K",
+            "Beam Angles": "140° Wide Homogeneous Diffuse",
+            "Color Rendering": "CRI ≥ 82",
+            "Visual Comfort": "Extruded opal PC diffuser with no diode imaging",
+            "Cut-out Dimensions": "1180 × 24 × 36 mm Ultra-Slim Profile",
+            "Body Finish": "Polycarbonate Chassis with Extruded Aluminum Heat Sink",
+            "Ingress Rating": "IP20 Clean Commercial Grade",
+            "Mounting System": "Surface mounting clips & direct-link power interconnectors"
+          },
+          "highlights": [
+            "Link up to 15 fixtures end-to-end without dark shadows between connections",
+            "Ultra-compact cross-section (24mm wide) conceals neatly inside architectural coves and pelmets",
+            "Integrated ON/OFF rocker switch and supplied with 150mm flexible link cables",
+            "The go-to luminaire for back-of-house utility corridors, kitchen pelmets, and retail displays"
+          ]
+        }
+      ]
+    }
+  ]
+}
+
+if __name__ == '__main__':
+    # Verify all product image paths
+    missing_images = []
+    total_products = 0
+    for cat in catalog_data["categories"]:
+        total_products += len(cat["products"])
+        for prod in cat["products"]:
+            img_path = prod["img"]
+            if not os.path.exists(img_path):
+                missing_images.append(img_path)
+
+    print(f"Total categories: {len(catalog_data['categories'])}, Total products: {total_products}")
+    if missing_images:
+        print("Warning, missing images:", missing_images)
+    else:
+        print("All image files exist!")
+
+    # Save to data/products-catalog.json
+    os.makedirs("data", exist_ok=True)
+    with open("data/products-catalog.json", "w", encoding="utf-8") as f:
+        json.dump(catalog_data, f, indent=2, ensure_ascii=False)
+
+    print("Successfully wrote data/products-catalog.json")
+
+    # Also copy data to LEDONIX WEBISITE files
+    os.makedirs("LEDONIX WEBISITE files/ledonix webiste concept B/data", exist_ok=True)
+    with open("LEDONIX WEBISITE files/ledonix webiste concept B/data/products-catalog.json", "w", encoding="utf-8") as f:
+        json.dump(catalog_data, f, indent=2, ensure_ascii=False)
+
+    print("Successfully synchronized data to concept B!")
